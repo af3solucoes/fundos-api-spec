@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: Fundos API
+  description: Ativo estratégico disponível para aquisição via AF3 Soluções.
+  version: 1.0.0
+paths:
+  /v1/status:
+    get:
+      summary: Status do Ativo
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              example:
+                status: "available"
+                domain: "fundos.api.br"
+  /v1/fundos/{cnpj}:
+    get:
+      summary: Dados CVM
+      responses:
+        '200':
+          description: OK
